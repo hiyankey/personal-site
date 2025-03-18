@@ -8,6 +8,7 @@ export default function Home() {
         <h3 className="font-display text-lg mb-[28px]">Yan J.</h3>
         <div className="space-y-[14px] text-[#c9c9c9]">
           <p>i'm a design engineer based in Santorini.</p>
+          <p>i love sweating the details.</p>
           <p>rn, i'm pushing code and exploring design with curiosity.</p>
         </div>
 
