@@ -10,12 +10,23 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-display: var(--font-lore);
+
+  --animate-infinite-slider: infinite-slider 40s linear infinite;
+
+  @keyframes infinite-slider {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap))) ;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #101010;
+    --foreground: #f0f0f0;
   }
 }
 
