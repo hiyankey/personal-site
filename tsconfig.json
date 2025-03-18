@@ -22,10 +22,17 @@
         "name": "next"
       }
     ],
+    "baseUrl": "app/",
     "paths": {
-      "@/*": [
+      "@*": [
         "./*"
-      ]
+      ],
+      "@ui/*": [
+        "./ui/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ],
     },
     "strictNullChecks": true
   },

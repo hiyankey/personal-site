@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { cx } from "../lib/utils";
+import { cx } from "@lib/utils";
 
 
 export function InfiniteSlider({children,className, pauseOnHover}: PropsWithChildren & {className?: string, pauseOnHover?: boolean}) { 

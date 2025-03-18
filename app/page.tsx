@@ -1,4 +1,4 @@
-import { InfiniteSlider } from "./ui/infinite-slider";
+import { InfiniteSlider } from "@ui/infinite-slider";
 
 
 export default function Home() {
@@ -7,12 +7,15 @@ export default function Home() {
 
       <div className="max-w-[600px] mx-auto py-[96px]">
         <h3 className="font-display text-lg mb-[28px]">Yan J.</h3>
-        <div className="space-y-[14px] text-[#c9c9c9] mb-[56px]">
+        <div className="space-y-[14px] text-[#c9c9c9] mb-[28px]">
           <p>i'm a design engineer based in Santorini.</p>
           <p>i love learning and sweating the details.</p>
           <p>rn, i'm pushing code and exploring design with curiosity.</p>
         </div>
-        <InfiniteSlider pauseOnHover>
+         <div className="w-fit font-sans text-xs">press <span className="px-1 py-[.5px] rounded-sm border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03] place-items-center inline-flex w-fit h-fit text-[#c9c9c9] ">c</span> to copy email</div>
+
+
+        <InfiniteSlider pauseOnHover className="my-[56px]">
       <img
         src="https://i.imgur.com/NfGQgBk.png"
         className="aspect-square w-[120px] rounded-[4px]"
@@ -43,10 +46,9 @@ export default function Home() {
         className="aspect-square w-[120px] rounded-[4px]"
         alt="06's image"
       />
-    </InfiniteSlider>
-
+        </InfiniteSlider>
+        
 </div>
-
    </main>
   );
 }
