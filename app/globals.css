@@ -33,5 +33,5 @@
 }
 
 body {
-  @apply bg-background text-foreground font-sans text-sm;
+  @apply bg-background text-foreground font-sans text-sm  ;
 }

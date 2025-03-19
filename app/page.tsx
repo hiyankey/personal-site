@@ -13,9 +13,9 @@ export default function Home() {
     (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
     )
     if (theme) {
-            localStorage.theme = "dark"
-          } else {
             localStorage.theme = "light"
+          } else {
+            localStorage.theme = "dark"
     }
 
   }, [theme])
@@ -24,17 +24,17 @@ export default function Home() {
    <main>
 
       <div className="max-w-[600px] mx-auto py-[96px]">
-        <h3 className="font-display text-lg mb-[28px]">Yan J.</h3>
+        <h3 className="font-display text-lg mb-[28px]">Yan J.     <button type="button" className="w-fit font-sans text-xs px-[6px] py-[2px] rounded-md border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03]" onClick={() => {
+          setTheme(prev => !prev)
+          
+         }}> {theme ? 'light': 'dark'}</button></h3>
         <div className="space-y-[14px] text-[#c9c9c9] mb-[28px]">
           <p>i'm a design engineer based in Santorini.</p>
           <p>i love learning and sweating the details.</p>
           <p>rn, i'm pushing code and exploring design with curiosity.</p>
         </div>
          <div className="w-fit font-sans text-xs">press <span className="px-1 py-[.5px] rounded-sm border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03] place-items-center inline-flex w-fit h-fit text-[#c9c9c9] ">c</span> to copy email</div>
-        <button type="button" className="w-fit font-sans text-xs px-[6px] py-[2px] rounded-md border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03]" onClick={() => {
-          setTheme(prev => !prev)
-          
-         }}>toggle theme {theme ? 'dark': 'light'}</button>
+    
 
 
         <InfiniteSlider pauseOnHover className="my-[56px]">
