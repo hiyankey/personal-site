@@ -51,33 +51,45 @@ export default function Home() {
 
         <InfiniteSlider pauseOnHover className="my-[56px]">
           <Image
-            src="https://i.Imageur.com/NfGQgBk.png"
+            src="https://assets.artfullywalls.com/works/70583/big-thumb-2024-01-26-oy9w-y4yV2ONtAZTdNAOen9yh7p25USDkdTgGl6anfa4jdE7JZIq_yr8wHDcyVI3O435J861ThgjBIwI.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="01's image"
           />
           <Image
-            src="https://i.Imageur.com/EeC1h3b.jpeg"
+            src="https://assets.artfullywalls.com/works/72558/big-thumb-2024-02-27-3F3NfcV0VsS5PhpjDRsMzfdgNrz2-aKhgDcCXy5Sv8mMNdVqVjcwy_-EmsHr4yj5mn-Y3T1SL0zC32uS.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="02's image"
           />
           <Image
-            src="https://i.Imageur.com/4VCS3zG.jpeg"
+            src="https://assets.artfullywalls.com/works/59121/big-thumb-2023-04-30-qfbTHN8pbXaUGFutCK_rVCT8FItdg0MrD4XfCpnzwQPKzBT8RgdWmp-70vldNm9ZWRqEvEIsa7tIwpmY.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="03's image"
           />
           <Image
-            src="https://i.Imageur.com/yWunBhl.jpeg"
+            src="https://assets.artfullywalls.com/works/72558/big-thumb-2024-02-27-3F3NfcV0VsS5PhpjDRsMzfdgNrz2-aKhgDcCXy5Sv8mMNdVqVjcwy_-EmsHr4yj5mn-Y3T1SL0zC32uS.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="04's image"
           />
           <Image
-            src="https://i.Imageur.com/dfDyDad.jpeg"
+            src="https://assets.artfullywalls.com/works/74385/big-thumb-2024-04-01-l_4loUeeD2hix5BlEiHZRsNl-n9GSGsgUbkNWL6_3by0nvACrXrv8qrbSnY5rMahusHHrPEU86T7Qv4B.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="05's image"
           />
           <Image
-            src="https://i.Imageur.com/7N3FxDW.jpeg"
+            src="https://assets.artfullywalls.com/works/72558/big-thumb-2024-02-27-3F3NfcV0VsS5PhpjDRsMzfdgNrz2-aKhgDcCXy5Sv8mMNdVqVjcwy_-EmsHr4yj5mn-Y3T1SL0zC32uS.jpg"
             className="aspect-square w-[120px] rounded-[4px]"
+            width={120}
+            height={120}
             alt="06's image"
           />
         </InfiniteSlider>
