@@ -1,76 +1,86 @@
-'use client'
-import { InfiniteSlider } from "@ui/infinite-slider";
-import { useEffect, useState } from "react";
-
+'use client';
+import { InfiniteSlider } from '@ui/infinite-slider';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [theme, setTheme]= useState(false)
+  const [theme, setTheme] = useState(false);
 
-  useEffect(() => { 
+  useEffect(() => {
     document.documentElement.classList.toggle(
-  "dark",
-  localStorage.theme === "dark" ||
-    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-    )
+      'dark',
+      localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
     if (theme) {
-            localStorage.theme = "light"
-          } else {
-            localStorage.theme = "dark"
+      localStorage.theme = 'light';
+    } else {
+      localStorage.theme = 'dark';
     }
-
-  }, [theme])
+  }, [theme]);
 
   return (
-   <main>
-
-      <div className="max-w-[600px] mx-auto py-[96px]">
-        <h3 className="font-display text-lg mb-[28px]">Yan J.     <button type="button" className="w-fit font-sans text-xs px-[6px] py-[2px] rounded-md border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03]" onClick={() => {
-          setTheme(prev => !prev)
-          
-         }}> {theme ? 'light': 'dark'}</button></h3>
-        <div className="space-y-[14px] text-[#c9c9c9] mb-[28px]">
+    <main>
+      <div className="mx-auto max-w-[600px] py-[96px]">
+        <h3 className="mb-[28px] font-display text-lg">
+          Yan J.{' '}
+          <button
+            type="button"
+            className="w-fit rounded-md border-[#fff]/[.05] border-[1px] bg-[#fff]/[.03] px-[6px] py-[2px] font-sans text-xs"
+            onClick={() => {
+              setTheme((prev) => !prev);
+            }}
+          >
+            {' '}
+            {theme ? 'light' : 'dark'}
+          </button>
+        </h3>
+        <div className="mb-[28px] space-y-[14px] text-[#c9c9c9]">
           <p>i'm a design engineer based in Santorini.</p>
           <p>i love learning and sweating the details.</p>
           <p>rn, i'm pushing code and exploring design with curiosity.</p>
         </div>
-         <div className="w-fit font-sans text-xs">press <span className="px-1 py-[.5px] rounded-sm border-[1px] border-[#fff]/[.05] bg-[#fff]/[.03] place-items-center inline-flex w-fit h-fit text-[#c9c9c9] ">c</span> to copy email</div>
-    
-
+        <div className="w-fit font-sans text-xs">
+          press{' '}
+          <span className="inline-flex h-fit w-fit place-items-center rounded-sm border-[#fff]/[.05] border-[1px] bg-[#fff]/[.03] px-1 py-[.5px] text-[#c9c9c9] ">
+            c
+          </span>{' '}
+          to copy email
+        </div>
 
         <InfiniteSlider pauseOnHover className="my-[56px]">
-      <img
-        src="https://i.imgur.com/NfGQgBk.png"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="01's image"
-      />
-      <img
-        src="https://i.imgur.com/EeC1h3b.jpeg"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="02's image"
-      />
-      <img
-        src="https://i.imgur.com/4VCS3zG.jpeg"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="03's image"
-      />
-      <img
-        src="https://i.imgur.com/yWunBhl.jpeg"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="04's image"
-      />
-      <img
-        src="https://i.imgur.com/dfDyDad.jpeg"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="05's image"
-      />
-      <img
-        src="https://i.imgur.com/7N3FxDW.jpeg"
-        className="aspect-square w-[120px] rounded-[4px]"
-        alt="06's image"
-      />
+          <img
+            src="https://i.imgur.com/NfGQgBk.png"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="01's image"
+          />
+          <img
+            src="https://i.imgur.com/EeC1h3b.jpeg"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="02's image"
+          />
+          <img
+            src="https://i.imgur.com/4VCS3zG.jpeg"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="03's image"
+          />
+          <img
+            src="https://i.imgur.com/yWunBhl.jpeg"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="04's image"
+          />
+          <img
+            src="https://i.imgur.com/dfDyDad.jpeg"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="05's image"
+          />
+          <img
+            src="https://i.imgur.com/7N3FxDW.jpeg"
+            className="aspect-square w-[120px] rounded-[4px]"
+            alt="06's image"
+          />
         </InfiniteSlider>
-        
-</div>
-   </main>
+      </div>
+    </main>
   );
 }
