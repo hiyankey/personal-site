@@ -1,5 +1,6 @@
 'use client';
 import { InfiniteSlider } from '@ui/infinite-slider';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -49,33 +50,33 @@ export default function Home() {
         </div>
 
         <InfiniteSlider pauseOnHover className="my-[56px]">
-          <img
-            src="https://i.imgur.com/NfGQgBk.png"
+          <Image
+            src="https://i.Imageur.com/NfGQgBk.png"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="01's image"
           />
-          <img
-            src="https://i.imgur.com/EeC1h3b.jpeg"
+          <Image
+            src="https://i.Imageur.com/EeC1h3b.jpeg"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="02's image"
           />
-          <img
-            src="https://i.imgur.com/4VCS3zG.jpeg"
+          <Image
+            src="https://i.Imageur.com/4VCS3zG.jpeg"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="03's image"
           />
-          <img
-            src="https://i.imgur.com/yWunBhl.jpeg"
+          <Image
+            src="https://i.Imageur.com/yWunBhl.jpeg"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="04's image"
           />
-          <img
-            src="https://i.imgur.com/dfDyDad.jpeg"
+          <Image
+            src="https://i.Imageur.com/dfDyDad.jpeg"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="05's image"
           />
-          <img
-            src="https://i.imgur.com/7N3FxDW.jpeg"
+          <Image
+            src="https://i.Imageur.com/7N3FxDW.jpeg"
             className="aspect-square w-[120px] rounded-[4px]"
             alt="06's image"
           />

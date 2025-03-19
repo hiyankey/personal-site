@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
+  // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
   children: React.ReactNode;
 }>) {
   return (
