@@ -27,7 +27,7 @@ export default function Home() {
           Yan J.{' '}
           <button
             type="button"
-            className="w-fit rounded-md border-[#fff]/[.05] border-[1px] bg-[#fff]/[.03] px-[6px] py-[2px] font-sans text-xs"
+            className="w-fit rounded-md border-[#000]/[.05] border-[1px] bg-[#000]/[.03] px-[6px] py-[2px] font-sans text-xs dark:border-[#fff]/[.05] dark:bg-[#fff]/[.03]"
             onClick={() => {
               setTheme((prev) => !prev);
             }}
@@ -36,14 +36,14 @@ export default function Home() {
             {theme ? 'light' : 'dark'}
           </button>
         </h3>
-        <div className="mb-[28px] space-y-[14px] text-[#c9c9c9]">
+        <div className="mb-[28px] space-y-[14px] text-[#666] dark:text-[#c9c9c9]">
           <p>i'm a design engineer based in Santorini.</p>
           <p>i love learning and sweating the details.</p>
           <p>rn, i'm pushing code and exploring design with curiosity.</p>
         </div>
         <div className="w-fit font-sans text-xs">
           press{' '}
-          <span className="inline-flex h-fit w-fit place-items-center rounded-sm border-[#fff]/[.05] border-[1px] bg-[#fff]/[.03] px-1 py-[.5px] text-[#c9c9c9] ">
+          <span className="inline-flex h-fit w-fit place-items-center rounded-sm border-[#000]/[.05] border-[1px] bg-[#000]/[.03] px-1 py-[.5px] dark:border-[#fff]/[.05] dark:bg-[#fff]/[.03] ">
             c
           </span>{' '}
           to copy email

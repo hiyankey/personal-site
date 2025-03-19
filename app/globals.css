@@ -25,13 +25,13 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #101010;
     --foreground: #f0f0f0;
   }
-}
+} */
 
 body {
-  @apply bg-background text-foreground font-sans text-sm  ;
+  @apply bg-background text-foreground font-sans text-sm dark:bg-foreground dark:text-background  ;
 }
