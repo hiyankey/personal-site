@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inter } from "next/font/google";
+import { Caveat, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./hooks/useTheme";
 
@@ -13,6 +13,10 @@ const ibmMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: "300",
 });
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${ibmMono.variable} antialiased`}>
+    <html className="dark" lang="en">
+      <body
+        className={`${inter.variable} ${ibmMono.variable} ${caveat.variable} antialiased`}
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
