@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    border: 2px solid var(--color-gray-6);
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+}
+
+.gridGuides {
+    display: contents;
+}
+
+.gridGuide {
+    inset: 0px;
+    position: absolute;
+    grid-column-start: var(--x);
+    grid-column-end: span 1;
+    grid-row-start: var(--y);
+    grid-row-end: span 1;
+    border: 2px solid var(--color-gray-6);
+    border-left: none;
+    border-top: none;
+}
+
+.gridCross {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
