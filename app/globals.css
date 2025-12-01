@@ -212,14 +212,97 @@ body {
 
 }
 
+
+/* Utilities */
+@layer components {
+    .gesture-grabbing {
+        cursor: grabbing;
+        user-select: none;
+        -webkit-user-select: none;
+
+        * {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+    }
+
+    .gesture-resizing {
+        cursor: ew-resize;
+        user-select: none;
+        -webkit-user-select: none;
+
+        * {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .grid-stack {
+        @apply grid;
+        place-items: center center;
+
+        >* {
+            grid-area: 1 / 1;
+        }
+    }
+
+    .truncate {
+        @apply overflow-hidden whitespace-nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .translate-center-x {
+        @apply left-[50%] -translate-x-1/2;
+    }
+
+    .translate-z-0 {
+        transform: translateZ(0);
+    }
+
+    .translate-center-y {
+        @apply top-[50%] -translate-y-1/2;
+    }
+
+    .translate-center {
+        @apply top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .bleed {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        max-width: var(--max-width);
+    }
+
+    a,
+    button,
+    input,
+    textarea {
+        outline: 0;
+
+        &:focus-visible {
+            outline: 2px solid var(--color-focus);
+        }
+    }
+}
+
+
 .gridLine {
     --background: #FFFFFF;
-    --color: var(--gray-6);
+    --color: var(--color-gray-6);
     --height: 1px;
     --width: 5px;
     --fade-stop: 90%;
     /* Bleed in or out from the container */
-    --offset: -100px;
+    --offset: 0px;
 
     position: absolute;
     width: calc(100% + var(--offset));

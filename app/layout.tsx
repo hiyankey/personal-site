@@ -11,7 +11,7 @@ const inter = Inter({
 const ibmMono = IBM_Plex_Mono({
   variable: "--font-ibm-mono",
   subsets: ["latin"],
-  weight: "300",
+  weight: "400",
 });
 const caveat = Caveat({
   variable: "--font-caveat",
