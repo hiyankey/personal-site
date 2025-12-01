@@ -45,8 +45,8 @@ export default function Home() {
           </li>
         </ul>
       </div>
-      <div className="relative h-120 translate-center-x  max-w-240 overflow-hidden">
-        <div className=" absolute inset-0 mx-auto h-120 max-w-240">
+      <div className="relative h-120 translate-center-x  max-w-240">
+        <div className=" absolute inset-0 mx-auto h-120 max-w-240 overflow-clip">
           <Card className="top-4 left-64" height={185.27} width={322}>
             <Image
               alt=""
