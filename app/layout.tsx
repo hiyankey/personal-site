@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./hooks/useTheme";
+import { CounterStoreProvider } from "./provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,7 +34,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${ibmMono.variable} ${caveat.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {" "}
+          <CounterStoreProvider initialData={{ count: 0 }}>
+            {children}{" "}
+          </CounterStoreProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
