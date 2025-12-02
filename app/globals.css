@@ -5,6 +5,7 @@
 :root {
     --background: var(--gray-1);
     --foreground: var(--gray-12);
+    --canvas: #f8f8f8;
     /* Gray */
     --gray-1: hsl(0 0% 99%);
     --gray-2: hsl(0 0% 97.3%);
@@ -176,8 +177,9 @@
 }
 
 .dark {
-    --background: #0f0f0f;
-    --foreground: #fff;
+    --background: var(--gray-1);
+    --foreground: var(--gray-12);
+    --canvas: #161616;
     /* Gray */
     --gray-1: hsl(0 0% 8.5%);
     --gray-2: hsl(0 0% 11%);
@@ -318,7 +320,7 @@ body {
 
     /* Fade out the edges */
     mask-composite: exclude;
-    -webkit-mask:
+    --webkit-mask:
         linear-gradient(to left,
             var(--background) var(--fade-stop),
             transparent),
