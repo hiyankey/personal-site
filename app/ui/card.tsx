@@ -35,7 +35,19 @@ export function Card({ children, width, height, className, title }: CardProps) {
       whileHover={"hovered"}
     >
       <div
-        className="absolute top-0 right-0 left-0 inline-block cursor-grab p-6"
+        className="absolute top-0 right-0 left-0 z-10 inline-block cursor-grab p-6"
+        onPointerDown={startDrag}
+      />
+      <div
+        className="absolute right-0 bottom-0 left-0 z-10 inline-block cursor-grab p-6"
+        onPointerDown={startDrag}
+      />{" "}
+      <div
+        className="absolute top-0 right-0 bottom-0 z-10 inline-block cursor-grab p-6"
+        onPointerDown={startDrag}
+      />{" "}
+      <div
+        className="absolute top-0 bottom-0 left-0 z-10 inline-block cursor-grab p-6"
         onPointerDown={startDrag}
       />
       <motion.h3
