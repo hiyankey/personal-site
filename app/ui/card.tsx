@@ -1,5 +1,8 @@
 "use client";
-import { CornerBottomRightIcon, Cross2Icon } from "@radix-ui/react-icons";
+import {
+  ArrowTopRightIcon,
+  CornerBottomRightIcon,
+} from "@radix-ui/react-icons";
 import { motion, useDragControls } from "motion/react";
 import { useState } from "react";
 
@@ -30,9 +33,11 @@ export function Card({ children, width, height, className, title }: CardProps) {
       transition={{ ease: "easeOut" }}
       variants={{
         hovered: {},
+        tapped: { scale: 0.9 },
         default: {},
       }}
       whileHover={"hovered"}
+      whileTap={"tapped"}
     >
       <div
         className="absolute top-0 right-0 left-0 z-10 inline-block cursor-grab p-6"
@@ -65,7 +70,7 @@ export function Card({ children, width, height, className, title }: CardProps) {
             default: { scale: 0 },
           }}
         >
-          <Cross2Icon />
+          <ArrowTopRightIcon />
         </motion.button>
       </motion.div>
       <div
