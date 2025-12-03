@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useTheme from "./hooks/useTheme";
 import { Card } from "./ui/card";
+import { Container } from "./ui/container";
 import { ElasticSlider } from "./ui/elastic-slider";
 import { Grid } from "./ui/grid";
 import { Tooltip } from "./ui/primitives/tooltip";
@@ -19,7 +20,7 @@ export default function Home() {
         </button>
       </Tooltip>
 
-      <div className="mx-auto mb-16 max-w-150 space-y-4 pt-24 leading-7">
+      <Container className="mb-16 space-y-4 pt-24 leading-7">
         <p>
           My name is Emmanuel, I’m an Interactive designer for Web/Products,
           Crafting details, Things for screens
@@ -27,8 +28,8 @@ export default function Home() {
         <p>Focused on honing my craft</p>
 
         <p>When not coding, I do endurance things</p>
-      </div>
-      <div className="mx-auto mb-24 w-full max-w-150 leading-7">
+      </Container>
+      <Container className="mb-24 w-full leading-7">
         <h3 className="mb-4 font-mono text-14 text-gray-11">Timeline</h3>
         <ul className="group flex flex-col space-y-1">
           <li className="relative flex h-14 w-full items-center space-x-3 transition-[padding] duration-300 hover:pl-3">
@@ -47,7 +48,7 @@ export default function Home() {
             </Link>
           </li>
         </ul>
-      </div>
+      </Container>
       <div className="bleed">
         <div className="translate-center-x relative h-120 w-full max-w-240">
           <div className="absolute inset-0 overflow-clip">
@@ -93,16 +94,16 @@ export default function Home() {
           >
             <Grid columns={48} rows={24}>
               <Grid.Cross column={1} row={1}>
-                <Cross2Icon className="-translate-y-1/2 -translate-x-1/2 size-5 rotate-45" />
+                <Cross2Icon className="-translate-y-1/2 -translate-x-1/2 isolate z-50 size-5 rotate-45" />
               </Grid.Cross>
               <Grid.Cross column={-2} row={1}>
-                <Cross2Icon className="-translate-y-1/2 size-5 translate-x-1/2 rotate-45" />
+                <Cross2Icon className="-translate-y-1/2 isolate z-50 size-5 translate-x-1/2 rotate-45" />
               </Grid.Cross>
               <Grid.Cross column={1} row={-2}>
-                <Cross2Icon className="-translate-x-1/2 size-5 translate-y-1/2 rotate-45" />
+                <Cross2Icon className="-translate-x-1/2 isolate z-50 size-5 translate-y-1/2 rotate-45" />
               </Grid.Cross>
               <Grid.Cross column={-2} row={-2}>
-                <Cross2Icon className="size-5 translate-x-1/2 translate-y-1/2 rotate-45" />
+                <Cross2Icon className="isolate z-50 size-5 translate-x-1/2 translate-y-1/2 rotate-45" />
               </Grid.Cross>
             </Grid>
           </div>
