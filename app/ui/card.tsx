@@ -18,7 +18,7 @@ export function Card({ children, width, height, className, title }: CardProps) {
   };
   return (
     <motion.div
-      className={`${"relative rounded-6 bg-gray-3/90 p-1 shadow-[var(--shadow-border),var(--shadow-large)] backdrop-blur-[20px]"} ${className}`}
+      className={`${"w-fit rounded-6 bg-gray-3/90 p-1 shadow-[var(--shadow-border),var(--shadow-large)] backdrop-blur-[20px]"} ${className}`}
       drag
       dragControls={dragControls}
       dragListener={false}
@@ -26,11 +26,11 @@ export function Card({ children, width, height, className, title }: CardProps) {
       initial={"default"}
       onDragEnd={() => setIsDragging(false)}
       onDragStart={() => setIsDragging(true)}
-      style={{ height, width, zIndex: isDragging ? 10 : 0 }}
+      style={{ zIndex: isDragging ? 10 : 0 }}
       transition={{ ease: "easeOut" }}
       variants={{
-        hovered: { paddingTop: 24 },
-        default: { paddingTop: 4 },
+        hovered: {},
+        default: {},
       }}
       whileHover={"hovered"}
     >
@@ -41,35 +41,37 @@ export function Card({ children, width, height, className, title }: CardProps) {
       <div
         className="absolute right-0 bottom-0 left-0 z-10 inline-block cursor-grab p-6"
         onPointerDown={startDrag}
-      />{" "}
+      />
       <div
         className="absolute top-0 right-0 bottom-0 z-10 inline-block cursor-grab p-6"
         onPointerDown={startDrag}
-      />{" "}
+      />
       <div
         className="absolute top-0 bottom-0 left-0 z-10 inline-block cursor-grab p-6"
         onPointerDown={startDrag}
       />
-      <motion.h3
-        className="absolute top-1 left-1 text-12"
+      <motion.div
+        className="flex items-center justify-between"
         variants={{
-          hovered: { opacity: 1, scale: 1 },
-          default: { opacity: 0, scale: 0.9 },
+          hovered: { opacity: 1, height: 20 },
+          default: { opacity: 0, height: 0 },
         }}
       >
-        {title}
-      </motion.h3>
-      <motion.button
-        className="absolute top-1 right-1"
-        type="button"
-        variants={{
-          hovered: { opacity: 1, scale: 1 },
-          default: { opacity: 0, scale: 0 },
-        }}
+        <motion.h3 className="text-12">{title}</motion.h3>
+        <motion.button
+          type="button"
+          variants={{
+            hovered: { scale: 1 },
+            default: { scale: 0 },
+          }}
+        >
+          <Cross2Icon />
+        </motion.button>
+      </motion.div>
+      <div
+        className="relative flex touch-none select-none flex-col overflow-clip rounded-4 bg-(--canvas) p-1 will-change-[width,height]"
+        style={{ width, height }}
       >
-        <Cross2Icon />
-      </motion.button>
-      <div className="relative flex h-full w-full touch-none select-none flex-col overflow-clip rounded-4 bg-(--canvas) p-1">
         {children}
       </div>
       <motion.button

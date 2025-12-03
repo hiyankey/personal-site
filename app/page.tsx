@@ -25,6 +25,7 @@ export default function Home() {
           Crafting details, Things for screens
         </p>
         <p>Focused on honing my craft</p>
+
         <p>When not coding, I do endurance things</p>
       </div>
       <div className="mx-auto mb-24 w-full max-w-150 leading-7">
@@ -49,9 +50,9 @@ export default function Home() {
       </div>
       <div className="bleed">
         <div className="translate-center-x relative h-120 w-full max-w-240">
-          <div className="absolute inset-0 h-full w-full overflow-clip">
+          <div className="absolute inset-0 overflow-clip">
             <Card
-              className="absolute top-4 left-64"
+              className="absolute top-5 left-64"
               height={185.27}
               title="Test Image 1"
               width={322}
@@ -64,7 +65,7 @@ export default function Home() {
               />
             </Card>
             <Card
-              className="absolute top-11 left-[60%]"
+              className="absolute top-1/2 left-[60%]"
               height={188}
               title="Elastic Slider"
               width={260}
@@ -72,7 +73,7 @@ export default function Home() {
               <ElasticSlider />
             </Card>
             <Card
-              className="-top-36 absolute left-[6%]"
+              className="absolute top-55 left-[6%]"
               height={242}
               title="Test Image 2"
               width={422}
