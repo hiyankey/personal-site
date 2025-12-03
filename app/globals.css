@@ -88,6 +88,11 @@
     --shadow-border: 0 0 0 1px var(--shadow-border-color);
     --shadow-small: 0px 2px 2px #0000000a;
     --shadow-large: 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a;
+    /* Breakpoints */
+    --breakpoint-sm: 40rem;
+    --breakpoint-md: 48rem;
+    --breakpoint-lg: 64rem;
+    --breakpoint-xl: 80rem;
     --color-orange: #ff4d00;
     --color-red: #ff2b43;
     --color-yellow: #ffd335;
