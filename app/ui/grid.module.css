@@ -1,13 +1,13 @@
 .grid {
     display: grid;
+    height: 480px;
+    width: 960px;
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
-    border: 1px solid var(--color-gray-6);
+    border: 1.5px solid var(--color-gray-6);
     border-right: none;
     border-bottom: none;
     position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 .gridGuides {
@@ -21,7 +21,36 @@
     grid-column-end: span 1;
     grid-row-start: var(--y);
     grid-row-end: span 1;
-    border: 1px solid var(--color-gray-6);
+    border: 1.5px solid var(--color-gray-6);
     border-left: none;
     border-top: none;
+}
+
+.gridCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: var(--row);
+    grid-column: var(--column)
+}
+
+.cross {
+    --guide-width: 1.5px;
+    --cross-size: 16px;
+    --cross-color: var(--color-gray-12);
+    --cross-half-size: calc((var(--cross-size) / 2) + var(--guide-width) - 0.5px);
+    width: fit-content;
+    height: fit-content;
+    pointer-events: none;
+    position: absolute;
+    grid-column-start: var(--cross-column);
+    grid-row-start: var(--cross-row);
+    z-index: 2;
+    inset: calc(var(--cross-half-size) * -1)
+}
+
+.crossLine {
+    position: absolute;
+    border: var(--guide-width) solid var(--cross-color);
+    border-width: 0
 }

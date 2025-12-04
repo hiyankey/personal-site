@@ -4,7 +4,7 @@ import styles from "./grid.module.css";
 type GridProps = {
   rows: number;
   columns: number;
-  children: ReactElement<CrossProps>[];
+  children: ReactElement<CrossProps | CellProps>[];
 };
 
 export function Grid({ rows, columns, children }: GridProps) {
@@ -32,20 +32,56 @@ export function Grid({ rows, columns, children }: GridProps) {
     </div>
   );
 }
-
-type CrossProps = {
+type CellProps = {
   row: number;
   column: number;
   children: ReactNode;
 };
 
-function Cross({ row, column, children }: CrossProps) {
+function Cell({ row, column, children }: CellProps) {
   return (
     <div
-      className={`${styles.gridCross}`}
+      className={`${styles.gridCell}`}
       style={{ gridRow: row, gridColumn: column }}
     >
       {children}
+    </div>
+  );
+}
+Grid.Cell = Cell;
+
+type CrossProps = {
+  row: number;
+  column: number;
+};
+
+function Cross({ row, column }: CrossProps) {
+  return (
+    <div
+      className={styles.cross}
+      style={
+        {
+          "--cross-row": row,
+          "--cross-column": column,
+        } as CSSProperties
+      }
+    >
+      <div
+        className={styles.crossLine}
+        style={{
+          width: "var(--cross-half-size)",
+          height: "var(--cross-size)",
+          borderRightWidth: "var(--guide-width)",
+        }}
+      />
+      <div
+        className={styles.crossLine}
+        style={{
+          width: "var(--cross-size)",
+          height: "var(--cross-half-size)",
+          borderBottomWidth: "var(--guide-width)",
+        }}
+      />
     </div>
   );
 }

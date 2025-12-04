@@ -1,5 +1,5 @@
 "use client";
-import { Cross2Icon, Half1Icon, Half2Icon } from "@radix-ui/react-icons";
+import { Half1Icon, Half2Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import useTheme from "./hooks/useTheme";
@@ -87,24 +87,12 @@ export default function Home() {
               />
             </Card>
           </div>
-          <div
-            className="-z-10 sm:data-[columns=48] sm:data-[rows=24] data-[columns=24] data-[rows=12] absolute inset-0 h-full w-full"
-            data-columns={48}
-            data-rows={24}
-          >
+          <div className="-z-10 absolute inset-0 h-full w-full">
             <Grid columns={48} rows={24}>
-              <Grid.Cross column={1} row={1}>
-                <Cross2Icon className="-translate-y-1/2 -translate-x-1/2 isolate z-50 size-5 rotate-45" />
-              </Grid.Cross>
-              <Grid.Cross column={-2} row={1}>
-                <Cross2Icon className="-translate-y-1/2 isolate z-50 size-5 translate-x-1/2 rotate-45" />
-              </Grid.Cross>
-              <Grid.Cross column={1} row={-2}>
-                <Cross2Icon className="-translate-x-1/2 isolate z-50 size-5 translate-y-1/2 rotate-45" />
-              </Grid.Cross>
-              <Grid.Cross column={-2} row={-2}>
-                <Cross2Icon className="isolate z-50 size-5 translate-x-1/2 translate-y-1/2 rotate-45" />
-              </Grid.Cross>
+              <Grid.Cross column={1} row={1} />
+              <Grid.Cross column={-1} row={1} />
+              <Grid.Cross column={1} row={-1} />
+              <Grid.Cross column={-1} row={-1} />
             </Grid>
           </div>
         </div>
